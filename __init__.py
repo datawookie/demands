@@ -53,9 +53,6 @@ def post(url, headers, data, cookies=None, proxy=None):
      requests.exceptions.ChunkedEncodingError),
     max_tries=8)
 def get(url, headers=None, proxy=None, deserialise=False):
-    logging.info("GETTING")
-    logging.info("GETTING")
-    logging.info("GETTING")
     response = requests.get(
         url,
         headers=headers,
