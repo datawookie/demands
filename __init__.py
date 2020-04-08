@@ -31,7 +31,7 @@ def proxy_dictionary(proxy):
      requests.exceptions.ConnectTimeout,
      requests.exceptions.ReadTimeout,
      requests.exceptions.ChunkedEncodingError),
-    max_tries=8)
+    max_tries=10)
 def post(url, headers, data, cookies=None, proxy=None):
     return requests.post(
         url,
@@ -51,7 +51,7 @@ def post(url, headers, data, cookies=None, proxy=None):
      requests.exceptions.ConnectTimeout,
      requests.exceptions.ReadTimeout,
      requests.exceptions.ChunkedEncodingError),
-    max_tries=8)
+    max_tries=10)
 def get(url, headers=None, proxy=None, deserialise=False):
     response = requests.get(
         url,
