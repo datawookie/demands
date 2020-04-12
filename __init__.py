@@ -52,10 +52,11 @@ def post(url, headers, data, cookies=None, proxy=None):
      requests.exceptions.ReadTimeout,
      requests.exceptions.ChunkedEncodingError),
     max_tries=10)
-def get(url, headers=None, proxy=None, deserialise=False):
+def get(url, headers=None, params=None, proxy=None, deserialise=False):
     response = requests.get(
         url,
         headers=headers,
+        params=params,
         proxies=proxy_dictionary(proxy)
         )
     
